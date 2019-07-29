@@ -1,0 +1,320 @@
+<html>
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+body {
+ /* margin:0 ;*/
+  background-color: black;
+}
+.header {
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+  font-family: clip;
+  color: 26FDD4;
+}
+.p.ex1 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: blue;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: BLACK;
+  box-shadow: 50px
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: GREEN;
+}
+input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+.format{
+	align-items: center;
+}
+.img-box1 {
+  box-sizing: content-box;
+  margin: 100px;
+  height: 1000px;
+  width: 1000px;
+  overflow: hidden;
+  display: inline-block;
+  color: white;
+  position: relative;
+  background-color: black;
+  box-shadow: 50px;
+}
+
+.gallery-image {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 10%;
+}
+
+.gallery-image img {
+  height: 250px;
+  width: 350px;
+  transform: scale(1.0);
+  transition: transform 0.4s ease;
+}
+
+.img-box {
+  box-sizing: content-box;
+  margin: 10px;
+  height: 250px;
+  width: 350px;
+  overflow: hidden;
+  display: inline-block;
+  color: white;
+  position: relative;
+  background-color: black;
+  box-shadow: 50px;
+}
+
+.caption {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  opacity: 0.0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  font-family: Donkey Stone;
+  color: 26FDD4;
+}
+
+.transparent-box {
+  height: 250px;
+  width: 350px;
+  background-color:rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s ease;
+}
+
+.img-box:hover .img { 
+  transform: scale(1.1);
+}
+
+.img-box:hover .transparent-box {
+  background-color:rgba(0, 0, 0, 0.5);
+}
+
+.img-box:hover .caption {
+  transform: translateY(-20px);
+  opacity: 1.0;
+}
+
+.img-box:hover {
+  cursor: pointer;
+}
+
+.caption > p:nth-child(2) {
+  font-size: 0.8em;
+}
+
+.opacity-low {
+  opacity: 0.5;
+}
+.h{
+   text-align: left;
+   text-decoration: line-through;
+   color:  26FDD4;
+   font-family: Donkey Stone;
+   font size: 90px;
+}
+
+.textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid  26FDD4;
+  border-radius: 10px;
+  background-color: black;
+  font-size: 16px;
+  resize: none;
+  align-items: center;
+  font-family: Donkey Stone;
+  border-color:  26FDD4;
+}
+</style>
+</head>
+<body>
+	<p class="ex1">
+<div class="header">
+  <h1>techLobby</h1>
+  </div>
+</p>
+<form>
+<div class="topnav">
+	<i class="glyphicon glyphicon-envelope"></i>
+<i class="glyphicon glyphicon-thumbs-up"></i>
+<button type="button" class="btn btn-info">
+      <p><span class="glyphicon glyphicon-search" placeholder = "Search"></span> 
+<button type="button" class="btn btn-primary">Home</button>
+    <button type="button" class="btn btn-primary">Contact</button>
+    <button type="button" class="btn btn-primary">Notification</button>
+    <button type="button" class="btn btn-primary">Order</button>
+    <button type="button" class="btn btn-primary">Offers</button>
+    <button type="button" class="btn btn-primary">message</button>
+    <button type="button" class="btn btn-primary">techLobby pay</button>
+    <button type="button" class="btn btn-primary">Sell</button>
+    <button type="button" class="btn btn-primary">Coustmer Service</button>
+    <button type="button" class="btn btn-primary">Cart</button>
+    <button type="button" class="btn btn-primary">Account</button>
+    <button type="button" class="btn btn-primary">Log In</button>
+    <button type="button" class="btn btn-primary">About us</button>
+    <button type="button" class="btn btn-primary">Sign out</button>
+</button>
+</p>
+</div>
+</form>
+<marquee><font face="Donkey Stone" color="26FDD4" size="20px"> All products are of low cost.And of 100% guarantee</font></marquee>
+<div class="row">
+  <div class="column">
+    <font face="Donkey Stone" color="26FDD4" size="50px"> 
+	<button type="button" class="btn btn-primary"><pre>Home     </pre></button><br>
+	<button type="button" class="btn btn-primary"><pre>Ur Order </pre></button><br>
+	<button type="button" class="btn btn-primary"><pre>Wishlist </pre></button><br>
+	<button type="button" class="btn btn-primary"><pre>Message  </pre></button><br>
+	<button type="button" class="btn btn-primary"><pre>Category </pre></button><br>
+	<button type="button" class="btn btn-primary"><pre>Profile  </pre></button><br>
+	<button type="button" class="btn btn-primary"><pre>Account  </pre></button><br>
+	<button type="button" class="btn btn-primary"><pre>Log In   </pre></button><br>
+	<button type="button" class="btn btn-primary"><pre>Sign out </pre></button><br>
+	<button type="button" class="btn btn-primary"><pre>About us </pre></button><br>
+    </font>
+    </div>
+<div class="format">
+<div class ="img-box1">
+  <p class="ex3"><div class="gallery-image">
+    <div class="img-box">
+      <img src="a82.jpg"/>
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Smart Watches</p>
+          <p class="opacity-low">-1,995 Rs.</p>
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+      <img src="a81.png"/>
+      <div class="transparent-box">
+      	<div class="caption">
+      		<p>Headphones</p>
+      		<p class="opacity-low">-25,000 Rs.</p>
+      	</div>
+      </div>
+    </div>
+    <div class="img-box">
+      <img src="a83.jpg"/>
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Pen Drives</p>
+          <p class="opacity-low">-1,200 Rs</p>
+        </div>
+      </div>
+    </div>
+    <div class="img-box">
+      <img src="a84.jpg"/>
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Projectors</p>
+          <p class="opacity-low">-3,000 Rs.</p>
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+      <img src="a85.jpg"/>
+      <div class="transparent-box">
+        <div class="caption">
+          <p>Mouse</p>
+          <p class="opacity-low">-1,000 Rs.</p>
+        </div>
+      </div> 
+    </div>
+    <div class="img-box">
+      <img src="a86.jpg" />
+      <div class="transparent-box">
+        <div class="caption">
+          <p>VR Headset</p>
+          <p class="opacity-low">-1,200 Rs.</p>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
+<div class = h>
+ <p class="ex3"> <p>Any Suggestion</p></p>
+<form>
+  <textarea>Some text...</textarea>
+</form>
+</div></p>
+<p class="ex3"></p>
+</div>
+</div>
+</body>
+</html>
